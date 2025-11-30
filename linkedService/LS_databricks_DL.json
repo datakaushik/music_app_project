@@ -1,0 +1,12 @@
+{
+	"name": "LS_databricks_DL",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricksDeltaLake",
+		"typeProperties": {
+			"domain": "https://adb-1822620811431144.4.azuredatabricks.net",
+			"clusterId": "1128-170248-a5njak66",
+			"workspaceResourceId": "/subscriptions/1b5363a3-b83e-4df0-9129-11602cc00b4b/resourceGroups/RG-spotifyanshyogi/providers/Microsoft.Databricks/workspaces/adbspotifyanshyogi"
+		}
+	}
+}
