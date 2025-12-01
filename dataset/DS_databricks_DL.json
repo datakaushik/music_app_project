@@ -1,0 +1,12 @@
+{
+	"name": "DS_databricks_DL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_databricks_DL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDatabricksDeltaLakeDataset",
+		"schema": []
+	}
+}
