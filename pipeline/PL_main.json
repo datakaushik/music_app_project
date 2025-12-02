@@ -157,7 +157,7 @@
 											"source": {
 												"type": "AzureSqlSource",
 												"sqlReaderQuery": {
-													"value": "@concat('Select * from ',item().schema_name,'.',item().table_name,'Where updated_at is Between ',activity('Getting Max Timstamp Database').output.value[0].max_timestamp,' and ',activity('Getting Watermark Time').output.value[0].watermark_time)",
+													"value": "@concat(\n    'Select * from ',\n    item().schema_name, '.', item().table_name,\n    ' Where updated_at Between ''',\n    activity('Getting Max Timstamp Database').output.value[0].max_timestamp,\n    ''' and ''',\n    activity('Getting Watermark Time').output.value[0].watermark_time,\n    ''''\n)\n",
 													"type": "Expression"
 												},
 												"queryTimeout": "02:00:00",
