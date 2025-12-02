@@ -72,7 +72,7 @@
 											"source": {
 												"type": "AzureSqlSource",
 												"sqlReaderQuery": {
-													"value": "@concat('Select MAX(updated_at) as max_timestamp from ',item().schema_name,'.',item().table_name)",
+													"value": "@concat(\n    'Select MAX(',\n        if(equals(item().table_name,'FactStream'), 'stream_timestamp', 'updated_at'),\n    ') as max_timestamp from ',\n    item().schema_name, '.', item().table_name\n)\n",
 													"type": "Expression"
 												},
 												"queryTimeout": "02:00:00",
