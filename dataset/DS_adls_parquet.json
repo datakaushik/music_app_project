@@ -22,7 +22,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@concat(dataset().file_name, '_', formatDateTime(variables('Current_time'), 'yyyyMMddHHmmss'), '.parquet')",
+					"value": "@dataset().file_name",
 					"type": "Expression"
 				},
 				"folderPath": {
