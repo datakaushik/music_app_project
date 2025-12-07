@@ -331,7 +331,7 @@
 														"type": "Expression"
 													},
 													"file_name": {
-														"value": "@item().file_name",
+														"value": " @concat(\n    item().file_name,\n    '_',\n    formatDateTime(variables('Current_time'), 'yyyyMMddHHmmss'),\n    '.parquet'\n)",
 														"type": "Expression"
 													}
 												}
